@@ -1,15 +1,22 @@
-pub fn part1(left: usize, right: usize) -> usize {
-    print!("{}",left+right);
-    left + right
-}
+use std::fs;
+use std::path::PathBuf;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+pub fn part1(path: PathBuf) -> u32{
+    if path.exists(){
+        println!("path exists");
+    }else{
+        println!("why")
     }
+    let mut calories = fs::read_to_string(path)
+        .unwrap()
+        .split("\n\n")
+        .map(|elf_load|{
+            elf_load
+                .lines()
+                .map(|item| item.parse::<u32>().unwrap())
+                .sum::<u32>()
+        }).collect::<Vec<_>>();
+    calories.sort_by(|a,b|b.cmp(a));
+    let ans = calories.first().unwrap_or(&0);
+    *ans
 }

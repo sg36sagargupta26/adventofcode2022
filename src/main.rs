@@ -1,5 +1,6 @@
+use std::path::PathBuf;
 use day01::part1;
 fn main() {
-    part1(4,5);
-    println!("Hello, world!");
+   let path = PathBuf::from("src/day01/data/inputPart1.txt");
+    println!("{}",part1(path));
 }
