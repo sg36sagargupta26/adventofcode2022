@@ -1,6 +1,6 @@
-use std::io;
+
 use std::path::PathBuf;
-use day01;
+// use day01;
 use day02;
 
 fn main() {
@@ -12,5 +12,7 @@ fn main() {
 
     /* day2: solutions*/
     let path1 = PathBuf::from("src/day02/data/input.txt");
+    let path2 = path1.clone();
     println!("{}", day02::part1(path1));
+    println!("{}", day02::part2(path2));
 }

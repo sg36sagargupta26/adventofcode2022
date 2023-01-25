@@ -36,9 +36,34 @@ impl FromStr for Move {
         }
     }
 }
+fn matcher( opponent_moves: &str ,my_moves: &str)->u32{
+    let opponent_move = opponent_moves.parse::<Move>().unwrap();
+    match my_moves {
+        "X" => {
+            let my_move = match opponent_move {
+                Move::Rock => Move::Scissors,
+                Move::Paper => Move::Rock,
+                Move::Scissors => Move::Paper,
+            };
+            my_move as u32
+        }
+        "Y" => 3 + opponent_move as u32,
+        "Z" => {
+            let my_move = match opponent_move {
+                Move::Rock => Move::Paper,
+                Move::Paper => Move::Scissors,
+                Move::Scissors => Move::Rock,
+            };
+            6 + my_move as u32
+        }
+        _=> {
+            panic!("Unexpected response");
+        }
+    }
+}
 
 pub fn part1(path: PathBuf) -> u32{
-    let mut score = fs::read_to_string(path)
+    let  score = fs::read_to_string(path)
         .unwrap()
         .lines()
         .map(|line|{
@@ -56,4 +81,14 @@ pub fn part1(path: PathBuf) -> u32{
     score
 }
 
+pub fn part2(path: PathBuf) -> u32{
+    let  score = fs::read_to_string(path)
+        .unwrap()
+        .lines()
+        .map(|line|{
+            let moves : Vec<&str> = line.split(" ").collect();
+            matcher(moves[0], moves[1])
+        }).sum();
+    score
+}
 
