@@ -9,5 +9,6 @@ edition = "2021"
 day01 = {path = 'src/day01'}
 day02 = {path = 'src/day02'}
 day03 = {path = 'src/day03'}
+day04 = {path = 'src/day04'}
 itertools = "0.10.5"
 lazy_static = "1.4.0"

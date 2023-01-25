@@ -9,6 +9,7 @@ dependencies = [
  "day01",
  "day02",
  "day03",
+ "day04",
  "itertools",
  "lazy_static",
 ]
@@ -28,6 +29,10 @@ dependencies = [
  "itertools",
  "lazy_static",
 ]
+
+[[package]]
+name = "day04"
+version = "0.1.0"
 
 [[package]]
 name = "either"
