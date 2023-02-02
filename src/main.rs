@@ -32,9 +32,8 @@ fn main() {
 
     /* day5: solutions*/
     let path1a = PathBuf::from("src/day05/data/input.txt");
-    let path1b = PathBuf::from("src/day04/data/input2.txt");
+    let path1b = PathBuf::from("src/day05/data/input2.txt");
     //let path2 = path1.clone();
-    day05::part1(path1a,path1b);
-    //println!("{}", day05::part1(path1,path2));
-    //println!("{}", day05::part2(path2));
+    println!("{}", day05::part1(path1a.clone(),path1b.clone()));
+    println!("{}", day05::part2(path1a,path1b));
 }
