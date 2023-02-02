@@ -11,5 +11,6 @@ day02 = {path = 'src/day02'}
 day03 = {path = 'src/day03'}
 day04 = {path = 'src/day04'}
 day05 = {path = 'src/day05'}
+day06 = {path = 'src/day06'}
 itertools = "0.10.5"
 lazy_static = "1.4.0"
