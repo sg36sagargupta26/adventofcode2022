@@ -35,5 +35,5 @@ fn main() {
     /* day6: solutions*/
     let path1 = PathBuf::from("src/day06/data/input.txt");
     println!("{}", day06::part1(path1.clone()));
-    //println!("{}", day06::part2(path1));
+    println!("{}", day06::part2(path1));
 }
