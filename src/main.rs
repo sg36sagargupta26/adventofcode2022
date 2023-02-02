@@ -3,6 +3,7 @@ use std::path::PathBuf;
 // use day01;
 // use day02;
 // use day03;
+use day05;
 
 fn main() {
     /* day1: solutions*/
@@ -24,8 +25,16 @@ fn main() {
     // println!("{}", day03::part2(path2));
 
     /* day4: solutions*/
-    let path1 = PathBuf::from("src/day04/data/input.txt");
-    let path2 = path1.clone();
-    println!("{}", day04::part1(path1));
-    println!("{}", day04::part2(path2));
+    // let path1 = PathBuf::from("src/day04/data/input.txt");
+    // let path2 = path1.clone();
+    // println!("{}", day04::part1(path1));
+    // println!("{}", day04::part2(path2));
+
+    /* day5: solutions*/
+    let path1a = PathBuf::from("src/day05/data/input.txt");
+    let path1b = PathBuf::from("src/day04/data/input2.txt");
+    //let path2 = path1.clone();
+    day05::part1(path1a,path1b);
+    //println!("{}", day05::part1(path1,path2));
+    //println!("{}", day05::part2(path2));
 }
